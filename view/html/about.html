@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ template "head" . }}
+
+<body>
+
+    <header>
+        {{ template "title-area" . }}
+        <div class="page-hero">
+            {{ template "navbar" . }}
+            <div class="welcome-area">
+                <h2 class="section-title white">A propos du projet</h2>
+                <p class="section-subtitle white">Projet Groupie Tracker</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="page-artist">
+            <p class="section-subtitle text-center red">Informations</p>
+            <h2 class="section-title text-center red">sur le projet</h2>
+            <div>
+                <p class="text-center">Le projet Groupie Tracker est un projet dont le but est de créer une interface web vous permettant de suivre différents artistes et groupes en utilisant une API.<br />
+                    Le projet Ytracker a été conçu par Luka GARCIA, Maxence GILLES et Éric MAGNE (avec l'aide précieuse des mentors qui nous ont accompagnés).<br />
+                <a href="https://git.ytrack.learn.ynov.com/LGARCIA2/groupie-tracker">Tout savoir sur le projet en cliquant ici</a></p>
+            </div>
+        </section>
+    </main>
+    
+    {{ template "footer" . }}
+    
+</body>
+</html>

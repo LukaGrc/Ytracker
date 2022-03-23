@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" . }}
+
+<body>
+
+    <header>
+        {{ template "title-area" . }}
+        <div class="home-hero">
+            {{ template "navbar" . }}
+            <div class="welcome-area">
+                <h2 class="section-title">Bienvenue sur Ytracker.</h2>
+                <p class="section-subtitle">Votre solution de traçage des célébrités.</p>
+                <a class="btn-link-red" href="#home-artists">Découvrir les artistes</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section id="home-artists">
+            <p class="section-subtitle text-center">Découvrez</p>
+            <h2 class="section-title text-center">les artistes</h2>
+            <div class="content">
+                {{ range .Artists }}
+                <div class="artist">
+                    <a href="/artist?id={{ .Id }}">
+                        <img class="rounded-red" src="{{ .Image }}" />
+                        <h3 class="text-center">{{ .Name }}</h3>
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            <a class="btn-link-red text-center" href="/artists">Voir plus d'artistes</a>
+        </section>
+    
+        <section id="home-map">
+            <div class="content">
+                <div class="col-2">
+                    <p class="section-subtitle white">Localisez</p>
+                    <h2 class="section-title white">vos artistes favoris</h2>
+                    <p class="text">
+                        Vous recherchez les artistes à proximité ?<br />Nous avons pensé un système de carte interactive pour afficher de manière efficace vos artistes favoris.
+                    </p>
+                    <a class="btn-link-white" href="/map">Découvrez notre carte</a>
+                </div>
+                <div class="col-2">
+                    <img class="map-img" src="/assets/images/map.png" />
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    
+
+    {{ template "footer" . }}
+
+</body>
+</html>

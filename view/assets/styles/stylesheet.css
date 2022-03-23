@@ -1,0 +1,516 @@
+/* ---------------------------------- */
+/* ----------{ INITIALIZE }---------- */
+/* ---------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #fefefe
+}
+
+h1, h2, h3, h3, h4, h5, h6, p, a, li, label {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.white {
+    color: #fefefe;
+}
+
+.red {
+    color: #E20019;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-title, .section-subtitle {
+    margin: 0px auto 0px auto;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 45px;
+    line-height: 0.8em;
+}
+
+.section-subtitle {
+    font-size: 25px;
+}
+
+.rounded-red {
+    border: solid 4px #E20019;
+    border-radius: 100%;
+}
+
+.btn-link-red, .btn-link-white {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.btn-link-red{
+    background-color: #E20019;
+    color: #fefefe;
+}
+
+.btn-link-red:hover{
+    background-color: #C00015;
+}
+
+.btn-link-white {
+    background-color: #fefefe;
+    color: #E20019;
+}
+
+.btn-link-white:hover {
+    background-color: #f0dddd;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+/* ---------------------------------- */
+/* ------------{ HEADER }------------ */
+/* ---------------------------------- */
+
+/* Title Area */
+header .title-area h1.title {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+header .title-area h1.title a {
+    color: #E20019;
+    text-decoration: none;
+}
+
+/* Navbar */
+header .navbar {
+    background-color: #E20019;
+    border-radius: 50px;
+    padding: 15px 0px 15px 0px;
+    display: flex;
+    width: 75%;
+    margin: auto;
+}
+
+header .navbar nav ul {
+    margin: 0px;
+}
+
+header .navbar nav ul li {
+    display: inline;
+    margin: 0px 0px 0px 25px;
+    border-radius: 50px;
+    padding: 15px 20px 12px 20px;
+    transition: background-color .3s;
+}
+
+header .navbar nav ul li:hover {
+    background-color: #C00015;
+}
+
+header .navbar nav ul li:first-child {
+    display: inline;
+    margin: 0px 0px 0px 0px;
+}
+
+header .navbar nav ul li a {
+    text-decoration: none;
+    color: #fefefe;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+header .navbar nav ul li a.active {
+    border-bottom: solid 3px #fefefe;
+}
+
+header .navbar form {
+    margin: auto 3em auto auto;
+}
+
+header .navbar form button {
+    background-color: transparent;
+    border:transparent;
+    color: #fefefe;
+    font-size: 18px;
+    cursor:pointer;
+    transition: color .2s;
+}
+
+header .navbar form button:hover {
+    color: #f0dddd;
+}
+
+header .navbar form input {
+    color: #fefefe;
+    border: solid 3px #fefefe;
+    background: transparent;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 1px 15px 2px 15px;
+}
+
+header .navbar form input:focus {
+    outline: none;
+    background-color: #C00015;
+}
+
+/* Homepage Hero Area */
+header .home-hero {
+    background: url("/assets/images/bg.jpg");
+    height: 650px;
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+}
+
+header .home-hero .welcome-area {
+    margin: 200px 100px 100px 100px;
+    color: #fefefe
+}
+
+header .home-hero .welcome-area .section-subtitle {
+    margin: 0 0 30px 20px;
+}
+
+header .home-hero .welcome-area .btn-link-red {
+    margin: 0 0 0px 30px;
+}
+
+/* Page Hero Area */
+
+header .page-hero {
+    background: url("/assets/images/bg.jpg");
+    height: 350px;
+    background-size: cover;
+    background-position: bottom;
+    padding: 20px;
+}
+
+header .page-hero .welcome-area {
+    margin: 100px 100px 100px 100px;
+    color: #fefefe
+}
+
+header .page-hero .welcome-area .section-subtitle {
+    margin: 0 0 30px 20px;
+}
+
+
+/* ---------------------------------- */
+/* -------{ HOME PAGE CONTENT }------ */
+/* ---------------------------------- */
+
+/* Artists zone */
+#home-artists, #page-artists, #page-artist{
+    padding: 30px 0px;
+}
+
+#home-artists .section-title, #home-artists .section-subtitle, #page-artists .section-title, #page-artists .section-subtitle, #page-artist .section-subtitle, #page-artist .section-title {
+    color:#E20019;
+}
+
+#home-artists .content {
+    margin: 30px 0px;
+    display:flex;
+    justify-content: space-around;
+}
+
+#home-artists .content .artist {
+    height: 288px;
+}
+
+#home-artists .content .artist .rounded-red:hover {
+    border: solid 6px #C00015;
+}
+
+#home-artists .content .artist h3 {
+    margin: 4px 0px;
+    color: #000000 !important;
+}
+
+#home-artists .btn-link-red {
+    margin: 0px auto 0px auto;
+    display: table;
+}
+
+/* Map zone */
+
+#home-map {
+    background-color: #E20019;
+    padding: 50px 150px;
+}
+
+#home-map .content {
+    display: flex;
+}
+
+#home-map .content p.text {
+    margin-bottom: 40px;
+    color: #fefefe;
+}
+
+#home-map .content img {
+    border: solid 4px #fefefe;
+    margin: 0px auto;
+    display: flex;
+    border-radius: 100%;
+    height: 250px;
+}
+
+/* PAGE ARTISTS */
+
+#page-artists .filters-zone {
+    display: flex;
+    margin: 50px auto;
+    padding: 0px 30px 0px 50px;
+    background-color: #E20019;
+    width: 80%;
+    border-radius: 50px;
+    color: #fefefe
+}
+
+#page-artists .filters-title {
+    margin-right: 50px;    
+}
+
+#page-artists .filters-title h3, #page-artists .filters-title p{
+    margin: 20px auto;
+}
+
+
+
+#page-artists .artists-zone {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#page-artists .artists-zone .artist-card {
+    width: 25%;
+    margin: 0px 0px 60px 0px;
+    height: 288px;
+}
+
+#page-artists .artists-zone .artist-card h3 {
+    margin: 4px 0px;
+    color: #000000 !important;
+}
+
+#page-artists .artists-zone .artist-card img {
+    margin: 0px auto;
+    display: flex;
+}
+
+#page-artists .artists-zone .artist-card .rounded-red:hover {
+    border: solid 6px #C00015;
+}
+
+.filters-form-zone {
+    width:inherit;
+}
+
+.filters-form {
+    display:flex;
+    margin-top: 12px;
+}
+
+.form-field {
+    display:inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+#ck1:checked ~ #lb1,
+#ck2:checked ~ #lb2,
+#ck3:checked ~ #lb3,
+#ck4:checked ~ #lb4,
+#ck5:checked ~ #lb5,
+#ck6:checked ~ #lb6,
+#ck7:checked ~ #lb7 {
+    background-color: #C00015;
+}
+
+.members {
+    color: white;
+    font-weight: 700;
+    margin-right: 5px;
+    padding: 1px 10px;
+    border-radius: 50px;
+    border: solid 3px transparent;
+    user-select: none;
+}
+
+.members:hover {
+    cursor: pointer;
+    border: solid 3px #C00015;
+}
+
+.memberNumber {
+    width: 40%;
+}
+
+.creationDate, .firstAlbumDate {
+    width: 30%;
+}
+
+
+/* PAGE D'ARTISTE */
+
+#page-artist .artist-zone {
+    margin:50px 0px 0px 0px;
+    display: flex;
+}
+
+#page-artist .artist-zone h3 {
+    margin-bottom: 0px;
+}
+
+#page-artist .artist-zone ul {
+    margin-top: 0px;
+}
+
+#page-artist .artist-zone img {
+    margin: 0px auto;
+    display: flex;
+}
+
+#page-artist .artist-zone li {
+    list-style: none;
+}
+
+#shows-artist {
+    background-color: #E20019;
+    padding: 30px 0px;
+}
+
+#map-artist {
+    padding: 30px 0px;
+}
+
+#map-artist .map {
+    display: flex;
+    margin: 25px auto 0px auto;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px 0px 5px 0px;
+}
+
+.credits, .powered{
+    margin: 0px;
+}
+
+.powered {
+    font-size: 12px;
+}
+
+.powered a {
+    text-decoration: none;
+    color: #E20019;
+}
+
+
+
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 80%;
+    background-color: transparent;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0px;
+    background: #C00015;
+    border-radius: 50px;
+    border: 0px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px;
+    border: 0px solid transparent;
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #C00015;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0px;
+    background: #C00015;
+    border-radius: 1.3px;
+    border: 0px solid transparent;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px;
+    border: 0px solid transparent;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #C00015;
+    border: 0px solid transparent;
+    border-radius: 2.6px;
+    box-shadow: 0px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #C00015;
+    border: 0px solid transparent;
+    border-radius: 2.6px;
+    box-shadow: 0px;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 0px;
+    border: 0px solid transparent;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #C00015;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #C00015;
+  }

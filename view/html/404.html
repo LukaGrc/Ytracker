@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" . }}
+
+<body>
+
+    <header>
+        {{ template "title-area" . }}
+        <div class="home-hero">
+            {{ template "navbar" . }}
+            <div class="welcome-area">
+                <h2 class="section-title">Erreur 404</h2>
+                <p class="section-subtitle">La page recherchée est introuvable.</p>
+                <a class="btn-link-red" href="/">Retour à l'accueil</a>
+            </div>
+        </div>
+    </header>    
+
+    {{ template "footer" . }}
+
+</body>
+</html>

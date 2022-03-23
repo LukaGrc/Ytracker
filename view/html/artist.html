@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ template "head" . }}
+
+<body>
+
+    <header>
+        {{ template "title-area" . }}
+        <div class="page-hero">
+            {{ template "navbar" . }}
+            <div class="welcome-area">
+                <h2 class="section-title white">Artiste : {{ .Art.Name }}</h2>
+                <p class="section-subtitle white">Suivez-le sur Ytracker !</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="page-artist">
+            <p class="section-subtitle text-center red">Informations</p>
+            <h2 class="section-title text-center red">sur le groupe</h2>
+            <div class="artist-zone">
+                <div class="col-2">
+                    <img class="rounded-red" src="{{ .Art.Image }}" />
+                </div>
+                <div class="col-2">
+                    <h3>Date de création :</h3>
+                    <ul>
+                        <li>{{ .Art.CreationDate }}</li>
+                    </ul>
+                    <h3>Premier album :</h3>
+                    <ul>
+                        <li>{{ .Art.FirstAlbum }}</li>
+                    </ul>
+                    <h3>Membres du groupe :</h3>
+                    <ul>
+                        {{ range .Art.Members }}
+                            <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="shows-artist">
+            <p class="section-subtitle text-center white">Prochains lieux et</p>
+            <h2 class="section-title text-center white">dates de concerts</h2>
+            <ul>
+                {{ range .Rel.DatesLocations }}
+                    <li>{{ . }}</li>
+                {{ end }}
+            </ul>
+        </section>
+        <section id="map-artist">
+            <p class="section-subtitle text-center red">Plan intéractif</p>
+            <h2 class="section-title text-center red">des prochains lieux</h2>
+            <img class="map" alt="Plan intéractif" src="/assets/images/map.png" />
+        </section>
+    </main>
+    
+    {{ template "footer" . }}
+    
+</body>
+</html>

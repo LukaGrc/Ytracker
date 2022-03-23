@@ -1,0 +1,17 @@
+{{ define "navbar" }}
+
+<div class="navbar">
+    <nav>
+        <ul>
+            <li><a href="/">Acceuil</a></li>
+            <li><a href="/about">A propos</a></li>
+            <li><a href="/artists">Artistes</a></li>
+        </ul>
+    </nav>
+    <form action="/search" method="GET">
+        <input name="terms" />
+        <button><i class="fas fa-search"></i></button>
+    </form>
+</div>
+
+{{ end }}

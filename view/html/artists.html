@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ template "head" . }}
+
+<body>
+
+    <header>
+        {{ template "title-area" . }}
+        <div class="page-hero">
+            {{ template "navbar" . }}
+            <div class="welcome-area">
+                <h2 class="section-title">Les artistes sur Ytracker.</h2>
+                <p class="section-subtitle">Découvrez un large panel d'artistes.</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="page-artists">
+            <p class="section-subtitle text-center">Suivez de près</p>
+            <h2 class="section-title text-center">vos artistes préférés</h2>
+            <div class="filters-zone">
+                <div class="filters-title">
+                    <h3>Filtres :</h3>
+                </div>
+                <div class="filters-form-zone">
+                    <form class="filters-form" onchange="search({ck1, ck2, ck3, ck4, ck5, ck6, ck7}, creationDateValue, firstAlbumDateValue)">
+                        <div class="form-field memberNumber">
+                            <label>Nombre de membres :</label><br />
+                            <input class="hidden" type="checkbox" id="ck1" value="1" /><label class="members" id="lb1" for="ck1">1</label>
+                            <input class="hidden" type="checkbox" id="ck2" value="2" /><label class="members" id="lb2" for="ck2">2</label>
+                            <input class="hidden" type="checkbox" id="ck3" value="3" /><label class="members" id="lb3" for="ck3">3</label>
+                            <input class="hidden" type="checkbox" id="ck4" value="4" /><label class="members" id="lb4" for="ck4">4</label>
+                            <input class="hidden" type="checkbox" id="ck5" value="5" /><label class="members" id="lb5" for="ck5">5</label>
+                            <input class="hidden" type="checkbox" id="ck6" value="6" /><label class="members" id="lb6" for="ck6">6</label>
+                            <input class="hidden" type="checkbox" id="ck7" value="7" /><label class="members" id="lb7" for="ck7">7</label>
+                        </div>
+
+                        <div class="form-field creationDate">
+                            <label onclick="reset(creationDateValue)">Date de création : <span id="creationDateValue">Sélectionnez</span></label><br />
+                            <input type="range" id="creationDateRange" min="1958" max="2009" oninput="updateRange(this ,creationDateValue)" />
+                        </div>
+
+                        <div class="form-field firstAlbumDate">
+                            <label onclick="reset(firstAlbumDateValue)">Premier album : <span id="firstAlbumDateValue">Sélectionnez</span></label><br />
+                            <input type="range" id="firstAlbumDateRange" min="1958" max="2009" oninput="updateRange(this ,firstAlbumDateValue)" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="artists-zone">
+                {{ range .TabArt }}
+                    <div class="artist-card nbMembers-{{ len .Members }} creationDate-{{ .CreationDate }} firstAlbumDate-{{ .FirstAlbum }}">
+                        <a href="/artist?id={{ .Id }}">
+                            <img class="rounded-red" src="{{ .Image }}" />
+                            <h3 class="text-center">{{ .Name }}</h3>
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+    </main>
+    
+    {{ template "footer" . }}
+    
+</body>
+</html>

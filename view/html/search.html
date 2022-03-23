@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ template "head" . }}
+
+<body>
+
+    <header>
+        {{ template "title-area" . }}
+        <div class="page-hero">
+            {{ template "navbar" . }}
+            <div class="welcome-area">
+                <h2 class="section-title">Résultats de recherche.</h2>
+                <p class="section-subtitle">Vous avez cherché : (recherche)</p>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="page-artists">
+            <p class="section-subtitle text-center">Nous avons trouvé</p>
+            <h2 class="section-title text-center">(x) résultats</h2>
+            <div class="artists-zone">
+                {{ range .Artists }}
+                    <div class="artist-card">
+                        <a href="/artist?id={{ .Id }}">
+                            <img class="rounded-red" src="{{ .Image }}" />
+                            <h3 class="text-center">{{ .Name }}</h3>
+                        </a>
+                    </div>
+                {{ end }}
+            </div>
+        </section>
+    </main>
+    
+    {{ template "footer" . }}
+    
+</body>
+</html>

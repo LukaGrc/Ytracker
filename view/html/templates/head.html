@@ -1,0 +1,35 @@
+{{ define "head" }}
+
+<head>
+    <!-- Données de base -->
+    <meta charset="UTF-8" />
+    <title>Ytracker - Votre solution de traçage de célébrités</title>
+    <meta name="keywords" content="Ytracker, Groupie Tracker, Projet, Ynov" />
+    <meta name="description" content="Projet Groupie Tracker - Bodeaux Ynov Campus 2022" />
+    <meta name="author" content="Eric Magne / Maxence Gilles / Luka Garcia" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon.png" />
+    
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="/assets/styles/stylesheet.css" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link href="/assets/styles/fontawesome.css" rel="stylesheet">
+
+    <!-- Polices d'écriture -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script type="module">
+        import { updateRange, search, reset } from "/assets/js/index.js"
+        window.updateRange = updateRange
+        window.search = search
+        window.reset = reset
+    </script>
+</head>
+
+{{ end }}
